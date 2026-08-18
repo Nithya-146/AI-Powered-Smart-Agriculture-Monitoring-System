@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap');
+
+:root {
+  --bg-paper: #FBF9F4;
+  --bg-card: #FFFFFF;
+  --bg-secondary: #F3EFE6;
+  --bg-tertiary: #EBE5D8;
+  
+  --soil-dark: #231B17;
+  --soil-deep: #382B24;
+  --soil-medium: #5D473A;
+  --soil-muted: #8C7565;
+
+  --wheat-gold: #C89551;
+  --wheat-light: #F4E8D3;
+  --wheat-border: #E5CDA8;
+
+  --leaf-green: #2D5A37;
+  --leaf-bright: #447E51;
+  --leaf-soft: #E8F2EA;
+
+  --accent-red: #A93226;
+  --accent-amber: #D68910;
+  --accent-blue: #2E86AB;
+  
+  --text-main: #231B17;
+  --text-muted: #6B5B52;
+  --text-light: #948378;
+
+  --border-color: #E2DBD0;
+  --border-focus: #C89551;
+
+  --shadow-sm: 0 1px 3px rgba(35, 27, 23, 0.06);
+  --shadow-md: 0 4px 12px rgba(35, 27, 23, 0.08);
+  --shadow-lg: 0 8px 24px rgba(35, 27, 23, 0.12);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-brand: 'Cinzel', serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-paper);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  color: var(--soil-dark);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brand-font {
+  font-family: var(--font-brand);
+  letter-spacing: 0.05em;
+}
+
+/* Precision Agriculture App Container */
+.agri-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Navbar */
+.agri-header {
+  background-color: var(--soil-dark);
+  color: var(--bg-paper);
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--wheat-gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.agri-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.agri-logo-icon {
+  background: linear-gradient(135deg, var(--wheat-gold), var(--leaf-green));
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agri-title {
+  color: #FBF9F4;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.agri-subtitle {
+  font-size: 0.75rem;
+  color: var(--wheat-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+/* Navigation Tabs */
+.agri-nav {
+  background-color: var(--soil-deep);
+  display: flex;
+  overflow-x: auto;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--soil-medium);
+}
+
+.agri-nav::-webkit-scrollbar {
+  height: 3px;
+}
+
+.agri-nav::-webkit-scrollbar-thumb {
+  background: var(--wheat-gold);
+}
+
+.agri-tab-btn {
+  background: none;
+  border: none;
+  color: #D3C4B8;
+  padding: 0.75rem 1.15rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.agri-tab-btn:hover {
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.agri-tab-btn.active {
+  color: var(--wheat-gold);
+  border-bottom-color: var(--wheat-gold);
+  font-weight: 600;
+  background-color: rgba(200, 149, 81, 0.1);
+}
+
+/* Main Content Area */
+.agri-main {
+  flex: 1;
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem;
+}
+
+/* Cards & Layout Containers */
+.agri-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.agri-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.agri-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--bg-secondary);
+}
+
+.agri-card-title {
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-4, .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-4, .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Precision Metric Badge */
+.metric-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-success {
+  background-color: var(--leaf-soft);
+  color: var(--leaf-green);
+  border: 1px solid rgba(45, 90, 55, 0.2);
+}
+
+.badge-warning {
+  background-color: #FEF9E7;
+  color: var(--accent-amber);
+  border: 1px solid rgba(214, 137, 16, 0.2);
+}
+
+.badge-danger {
+  background-color: #FDEDEC;
+  color: var(--accent-red);
+  border: 1px solid rgba(169, 50, 38, 0.2);
+}
+
+.badge-info {
+  background-color: #EBF5FB;
+  color: var(--accent-blue);
+  border: 1px solid rgba(46, 134, 171, 0.2);
+}
+
+/* Buttons & Inputs */
+.agri-btn {
+  background-color: var(--soil-deep);
+  color: #FFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.agri-btn:hover {
+  background-color: var(--soil-dark);
+  transform: translateY(-1px);
+}
+
+.agri-btn-gold {
+  background-color: var(--wheat-gold);
+  color: var(--soil-dark);
+}
+
+.agri-btn-gold:hover {
+  background-color: #B38243;
+  color: #FFF;
+}
+
+.agri-btn-green {
+  background-color: var(--leaf-green);
+  color: #FFF;
+}
+
+.agri-btn-green:hover {
+  background-color: var(--leaf-bright);
+}
+
+.agri-input, .agri-select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  transition: border-color 0.2s ease;
+}
+
+.agri-input:focus, .agri-select:focus {
+  outline: none;
+  border-color: var(--wheat-gold);
+  box-shadow: 0 0 0 2px rgba(200, 149, 81, 0.2);
+}
+
+/* Scanner Dropzone */
+.dropzone {
+  border: 2px dashed var(--wheat-gold);
+  background-color: var(--wheat-light);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropzone:hover {
+  background-color: #EFE3CE;
+  border-color: var(--soil-medium);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soil-muted);
+  border-radius: 3px;
+}

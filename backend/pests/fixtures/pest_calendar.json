@@ -1,0 +1,98 @@
+[
+  {
+    "model": "pests.pestcalendar",
+    "pk": 1,
+    "fields": {
+      "crop": "Wheat",
+      "pest_name": "Wheat Aphid",
+      "scientific_name": "Sitobion avenae",
+      "start_month": 1,
+      "end_month": 3,
+      "risk_level": "High",
+      "symptoms": "Yellowing leaves, honeydew excretion, stunted ear development.",
+      "prevention_measures": "Sow early in November, conserve ladybird beetle natural predators.",
+      "organic_controls": "Neem oil emulsion spray (5ml/L) or soap solution.",
+      "chemical_controls": "Imidacloprid 17.8 SL (1 ml / 3L water)."
+    }
+  },
+  {
+    "model": "pests.pestcalendar",
+    "pk": 2,
+    "fields": {
+      "crop": "Rice",
+      "pest_name": "Yellow Stem Borer",
+      "scientific_name": "Scirpophaga incertulas",
+      "start_month": 7,
+      "end_month": 10,
+      "risk_level": "Critical",
+      "symptoms": "Dead hearts at vegetative stage, white ear heads at panicle stage.",
+      "prevention_measures": "Clip leaf tips before transplanting, install pheromone traps at 20 traps/ha.",
+      "organic_controls": "Trichogramma japonicum egg parasitoid release.",
+      "chemical_controls": "Chlorantraniliprole 0.4% GR granular application."
+    }
+  },
+  {
+    "model": "pests.pestcalendar",
+    "pk": 3,
+    "fields": {
+      "crop": "Tomato",
+      "pest_name": "Whitefly Vector (TYLCV)",
+      "scientific_name": "Bemisia tabaci",
+      "start_month": 7,
+      "end_month": 11,
+      "risk_level": "High",
+      "symptoms": "Upward leaf curling, chlorosis, yellowing margins, vector for viral transmission.",
+      "prevention_measures": "Install yellow sticky traps (15-20/acre), net nursery beds with 40-mesh mesh.",
+      "organic_controls": "Spray Beauveria bassiana bio-insecticide.",
+      "chemical_controls": "Acetamiprid 20 SP or Thiamethoxam 25 WG."
+    }
+  },
+  {
+    "model": "pests.pestcalendar",
+    "pk": 4,
+    "fields": {
+      "crop": "Potato",
+      "pest_name": "Potato Tuber Moth",
+      "scientific_name": "Phthorimaea operculella",
+      "start_month": 2,
+      "end_month": 5,
+      "risk_level": "Medium",
+      "symptoms": "Mine galleries in leaves and tubers, frass deposits near tuber eyes.",
+      "prevention_measures": "Ensure good soil earthing up to keep tubers covered 5-7 cm deep.",
+      "organic_controls": "Store tubers with dried Lantana or Eucalyptus leaves.",
+      "chemical_controls": "Quinalphos 25 EC foliar spray."
+    }
+  },
+  {
+    "model": "pests.pestcalendar",
+    "pk": 5,
+    "fields": {
+      "crop": "Corn",
+      "pest_name": "Fall Armyworm",
+      "scientific_name": "Spodoptera frugiperda",
+      "start_month": 6,
+      "end_month": 9,
+      "risk_level": "Critical",
+      "symptoms": "Ragged whorl feeding, sawdust-like frass inside corn whorls.",
+      "prevention_measures": "Deep autumn plowing, intercropping with cowpea or desmodium.",
+      "organic_controls": "Apply Metarhizium anisopliae or neem seed kernel extract (NSKE 5%).",
+      "chemical_controls": "Spinetoram 11.7 SC or Emamectin benzoate 5 SG."
+    }
+  },
+  {
+    "model": "pests.pestcalendar",
+    "pk": 6,
+    "fields": {
+      "crop": "Cotton",
+      "pest_name": "Pink Bollworm",
+      "scientific_name": "Pectinophora gossypiella",
+      "start_month": 8,
+      "end_month": 11,
+      "risk_level": "High",
+      "symptoms": "Rosetted flowers, premature boll opening, stained lint inside bolls.",
+      "prevention_measures": "Use non-Bt refugia border rows, install PB-Rope pheromone dispensers.",
+      "organic_controls": "Release Trichogramma bactrae parasitoid wasps.",
+      "chemical_controls": "Profex Super or Indoxacarb 14.5 SC spray."
+    }
+  }
+]
